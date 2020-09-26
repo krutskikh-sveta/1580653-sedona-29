@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Welcome to the gorgeous Sedona</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-<header>
-    <nav>
-        <img src="https://via.placeholder.com/138x70" alt="Логотип городка Седона">
-        <ul>
+<body class="page-body">
+<header class="main-header">
+    <nav class="main-navigation">
+        <a class="main-navigation-logo">
+            <img src="https://via.placeholder.com/138x70" alt="Логотип городка Седона">
+        </a>
+        <ul class="site-navigation">
             <li><a href="blank.html">Информация</a></li>
             <li><a href="blank.html">Фото и видео</a></li>
             <li><a href="blank.html">Карта штата</a></li>
@@ -17,86 +22,92 @@
         </ul>
     </nav>
 </header>
-<main>
-    <h1>Welcome to the gorgeous Sedona</h1>
-    <section>
-        <h2>"Because the Grand Canyon sucks!"</h2>
-        <img src="https://via.placeholder.com/1200x509" alt="Главное изображение">
+<main class="container">
+    <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
+    <section class="first-screen-block">
+        <h2 class="visually-hidden">"Because the Grand Canyon sucks!"</h2>
+        <img class="slogan-image" src="https://via.placeholder.com/457x350" alt="Изображение-слоган">
+        <img class="main-image" src="https://via.placeholder.com/1200x509" alt="Главное изображение">
     </section>
-    <section>
-        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        <div>
-            <h3>Настоящий городок</h3>
-            <p>— №1 —<br>
-                Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="https://via.placeholder.com/800x256" alt="Иллюстрация к первой причине">
+    <section class="reasons-list">
+        <h2 class="reasons-list-title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+        <p class="reasons-list-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <div class="reason-item reason-item-with-image">
+            <h3 class="reason-title">Настоящий<br> городок</h3>
+            <p>— №1 —<br><br>
+                Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
         </div>
-        <div>
-            <h3>Рекомендации туристам</h3>
-            <ul>
-                <li>
-                    <h4>Жилье</h4>
-                    <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        <img class="reason-image" src="https://via.placeholder.com/800x256" alt="Иллюстрация к первой причине">
+        <div class="recommendations-container">
+            <h3 class="visually-hidden">Рекомендации туристам</h3>
+            <ul class="recommendations-list">
+                <li class="recommendation-item">
+                    <h4 class="recommendation-title">Жилье</h4>
+                    <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
                 </li>
-                <li>
-                    <h4>Еда</h4>
-                    <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <li class="recommendation-item">
+                    <h4 class="recommendation-title">Еда</h4>
+                    <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
                 </li>
-                <li>
-                    <h4>Сувениры</h4>
-                    <p>Не только китайского, но и местного производства!</p>
+                <li class="recommendation-item">
+                    <h4 class="recommendation-title">Сувениры</h4>
+                    <p>Не только китайского, но и местного<br> производства!</p>
                 </li>
             </ul>
         </div>
-        <div>
-            <h3>Там есть мост дьявола</h3>
-            <p>— №2 —<br>
-                Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img src="https://via.placeholder.com/800x256" alt="Иллюстрация ко второй причине причине">
+        <div class="reason-item reason-item-with-image">
+            <h3 class="reason-title">Там есть<br> мост дьявола</h3>
+            <p>— №2 —<br><br>
+                Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
         </div>
-        <div>
-            <h3>Небольшая площадь</h3>
-            <p>— №3 —<br>
-                Все достопримечательности находятся очень близко</p>
+        <img class="reason-image" src="https://via.placeholder.com/800x256"
+             alt="Иллюстрация ко второй причине причине">
+        <div class="reason-item">
+            <h3 class="reason-title">Небольшая<br> площадь</h3>
+            <p>— №3 —<br><br>
+                Все достопримечательности<br> находятся очень близко</p>
         </div>
-        <div>
-            <h3>Красивая дорога</h3>
-            <p>— №4 —<br>
-                Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <div class="reason-item">
+            <h3 class="reason-title">Красивая<br> дорога</h3>
+            <p>— №4 —<br><br>
+                Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
         </div>
-        <div>
-            <h3>Мало туристов</h3>
-            <p>— №5 —<br>
-                Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reason-item">
+            <h3 class="reason-title">Мало<br> туристов</h3>
+            <p>— №5 —<br><br>
+                Большинство едет в Гранд Каньон<br> и толпится там</p>
         </div>
     </section>
-    <section>
-        <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <div>
-            <h3>Поиск гостиницы в Седоне</h3>
-            <button type="button">Поиск гостиницы в Седоне</button>
-            <!-- Здесь будет разметка формы-->
-            <button type="button">Найти</button>
+    <section class="search-container">
+        <div class="search-title-block">
+            <h2 class="search-container-title">Заинтересовались?</h2>
+            <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
-        <img src="https://via.placeholder.com/1199x594" alt="Изображение карты">
+        <div>
+            <h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
+            <button class="form-trigger trigger-button" type="button"><span class="trigger-text">Поиск гостиницы в Седоне</span>
+            </button>
+            <!-- Здесь будет разметка формы-->
+            <button class="search-button button" type="button"><span class="button-text">Найти</span></button>
+        </div>
+        <div class="search-container-map"><img src="https://via.placeholder.com/1199x594" alt="Изображение карты"></div>
     </section>
 </main>
-<footer>
-    <section>
-        <h2>Свяжитесь с нами</h2>
-        <p>#VISITSEDONA<br>Тел:+7(495) 666-01-66</p>
+<footer class="main-footer">
+    <section class="footer-contacts">
+        <h2 class="visually-hidden">Свяжитесь с нами</h2>
+        <p>#VISITSEDONA<br>Тел: +7(495) 666-01-66</p>
     </section>
-    <section>
-        <h2>Подписывайтесь на нас</h2>
-        <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Youtube</a></li>
+    <section class="footer-social">
+        <h2 class="visually-hidden">Подписывайтесь на нас</h2>
+        <ul class="footer-social-list">
+            <li><a class="social-button button" href="#"><span class="button-text">Twitter</span></a></li>
+            <li><a class="social-button button" href="#"><span class="button-text">Facebook</span></a></li>
+            <li><a class="social-button button" href="#"><span class="button-text">Youtube</span></a></li>
         </ul>
     </section>
-    <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></p>
+    <p class="footer-copyright">Website by <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML
+        Academy</a></p>
 </footer>
 
 </body>
