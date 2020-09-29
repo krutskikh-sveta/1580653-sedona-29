@@ -1,50 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Найти гостиницу в Седоне</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<header>
-    <nav>
-        <a href="index.html">
+<body class="page-body">
+<header class="main-header">
+    <nav class="main-navigation">
+        <a class="main-navigation-logo" href="index.html">
             <img src="https://via.placeholder.com/138x70" alt="Логотип городка Седона">
         </a>
-        <ul>
+        <ul class="site-navigation">
             <li><a href="blank.html">Информация</a></li>
             <li><a href="blank.html">Фото и видео</a></li>
             <li><a href="blank.html">Карта штата</a></li>
-            <li><span>Гостиницы</span></li>
+            <li><span class="current-nav-item">Гостиницы</span></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <h1>Гостиницы Седоны</h1>
+<main class="container">
+    <h1 class="visually-hidden">Гостиницы Седоны</h1>
     <section>
-        <h2>Фильтры</h2>
-        <img src="https://via.placeholder.com/1200x217" alt="Background">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <div class="background-image"><img src="https://via.placeholder.com/1200x217" alt="Background"></div>
         <!-- Здесь будет форма фильтра -->
-        <div>
+        <div class="filter-button">
             <button type="button">Показать</button>
         </div>
     </section>
-    <section>
-        <h2>Сортировка</h2>
-        <p>Найдено: 3</p>
+    <section class="sorting-block">
+        <h2 class="visually-hidden">Сортировка</h2>
+        <p class="total-offers">Найдено: 3</p>
         <!-- Здесь будет форма сортировки -->
     </section>
-    <section>
-        <h2>Предложения</h2>
-        <ul>
-            <li>
+    <section class="offers-block">
+        <h2 class="visually-hidden">Предложения</h2>
+        <ul class="offers-list">
+            <li class="offer-item">
                 <a href="#">
-                    <img src="https://via.placeholder.com/135x90" alt="Фото отеля Amara Resort & Spa">
-                    <p>Amara Resort & Spa</p>
-                    <p>Гостиница</p>
-                    <p>От 4000 Р.</p>
-                    <div>
-                        <ul>
+                    <img class="offer-item-photo" src="https://via.placeholder.com/135x90"
+                         alt="Фото отеля Amara Resort & Spa">
+                    <p class="offer-item-name">Amara Resort & Spa</p>
+                    <p class="offer-item-type">Гостиница</p>
+                    <p class="offer-item-price">От 4000 Р.</p>
+                    <div class="rating-block">
+                        <ul class="rating-stars">
                             <li>
                                 <img src="https://via.placeholder.com/18x17" alt="star">
                             </li>
@@ -58,20 +62,23 @@
                                 <img src="https://via.placeholder.com/18x17" alt="star">
                             </li>
                         </ul>
+                        <p class="rating">Рейтинг: 8,5</p>
                     </div>
-                    <p>Рейтинг: 8,5</p>
                 </a>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
+                <button class="more-info-button button" type="button"><span class="button-text">Подробнее</span>
+                </button>
+                <button class="more-info-button form-trigger" type="button"><span
+                        class="trigger-text">Забронировать</span></button>
             </li>
-            <li>
+            <li class="offer-item">
                 <a href="#">
-                    <img src="https://via.placeholder.com/135x90" alt="Фото отеля Desert Quail Inn">
-                    <p>Desert Quail Inn</p>
-                    <p>Мотель</p>
-                    <p>От 3000 Р.</p>
-                    <div>
-                        <ul>
+                    <img class="offer-item-photo" src="https://via.placeholder.com/135x90"
+                         alt="Фото отеля Desert Quail Inn">
+                    <p class="offer-item-name">Desert Quail Inn</p>
+                    <p class="offer-item-type">Мотель</p>
+                    <p class="offer-item-price">От 3000 Р.</p>
+                    <div class="rating-block">
+                        <ul class="rating-stars">
                             <li>
                                 <img src="https://via.placeholder.com/18x17" alt="star">
                             </li>
@@ -82,20 +89,23 @@
                                 <img src="https://via.placeholder.com/18x17" alt="star">
                             </li>
                         </ul>
+                        <p class="rating">Рейтинг: 8,9</p>
                     </div>
-                    <p>Рейтинг: 8,9</p>
                 </a>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
+                <button class="more-info-button button" type="button"><span class="button-text">Подробнее</span>
+                </button>
+                <button class="more-info-button form-trigger" type="button"><span
+                        class="trigger-text">Забронировать</span></button>
             </li>
-            <li>
+            <li class="offer-item">
                 <a href="#">
-                    <img src="https://via.placeholder.com/135x90" alt="Фото отеля Villas at Poco Diablo">
-                    <p>Villas at Poco Diablo</p>
-                    <p>Апартаменты</p>
-                    <p>От 2000 Р.</p>
-                    <div>
-                        <ul>
+                    <img class="offer-item-photo" src="https://via.placeholder.com/135x90"
+                         alt="Фото отеля Villas at Poco Diablo">
+                    <p class="offer-item-name">Villas at Poco Diablo</p>
+                    <p class="offer-item-type">Апартаменты</p>
+                    <p class="offer-item-price">От 2000 Р.</p>
+                    <div class="rating-block">
+                        <ul class="rating-stars">
                             <li>
                                 <img src="https://via.placeholder.com/18x17" alt="star">
                             </li>
@@ -103,30 +113,33 @@
                                 <img src="https://via.placeholder.com/18x17" alt="star">
                             </li>
                         </ul>
+                        <p class="rating">Рейтинг: 9,2</p>
                     </div>
-                    <p>Рейтинг: 9,2</p>
                 </a>
-                <button type="button">Подробнее</button>
-                <button type="button">Забронировать</button>
+                <button class="more-info-button button" type="button"><span class="button-text">Подробнее</span>
+                </button>
+                <button class="more-info-button form-trigger" type="button"><span
+                        class="trigger-text">Забронировать</span></button>
             </li>
         </ul>
     </section>
 </main>
 
-<footer>
-    <section>
-        <h2>Свяжитесь с нами</h2>
-        <p>#VISITSEDONA<br>Тел:+7(495) 666-01-66</p>
+<footer class="main-footer">
+    <section class="footer-contacts">
+        <h2 class="visually-hidden">Свяжитесь с нами</h2>
+        <p>#VISITSEDONA<br>Тел: +7(495) 666-01-66</p>
     </section>
-    <section>
-        <h2>Подписывайтесь на нас</h2>
-        <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Youtube</a></li>
+    <section class="footer-social">
+        <h2 class="visually-hidden">Подписывайтесь на нас</h2>
+        <ul class="footer-social-list">
+            <li><a class="social-button button" href="#"><span class="button-text">Twitter</span></a></li>
+            <li><a class="social-button button" href="#"><span class="button-text">Facebook</span></a></li>
+            <li><a class="social-button button" href="#"><span class="button-text">Youtube</span></a></li>
         </ul>
     </section>
-    <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></p>
+    <p class="footer-copyright">Website by <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML
+        Academy</a></p>
 </footer>
 
 </body>
