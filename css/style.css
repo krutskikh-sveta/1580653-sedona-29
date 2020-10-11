@@ -388,11 +388,35 @@ img {
 .offers-list {
     list-style-type: none;
     margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: start;
 }
 
 .offer-item {
     border-top: 2px solid var(--basic-light-silver);
     border-bottom: 2px solid var(--basic-light-silver);
+}
+
+.offer-item-content {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 210px auto 185px;
+    gap: 30px;
+}
+
+.grid-offer-info {
+    display: grid;
+    grid-template-columns: 110px 140px auto;
+    padding: 26px 0;
+}
+
+.offer-item-content .offer-item-photo {
+    margin: auto 0 auto 73px;
 }
 
 .offer-item-photo {
@@ -404,6 +428,8 @@ img {
     font-size: 21px;
     line-height: 26px;
     color: var(--basic-black);
+    grid-column: 1 / -1;
+    margin: 5px 0;
 }
 
 .offer-item-name:hover {
@@ -416,18 +442,37 @@ img {
 
 .offer-item-type {
     color: var(--basic-extra-dark-grey);
+    grid-column: 1 /2;
+    margin: 5px;
 }
 
 .offer-item-price {
     color: var(--basic-extra-dark-grey);
+    grid-column: 2 / 3;
+    margin: 5px;
+}
+
+.offer-item-content .button {
+    grid-column: 1 /2;
+    margin: 5px;
+}
+
+.offer-item-content .trigger-button {
+    grid-column: 2 / 3;
+    margin: 5px;
 }
 
 .rating-block {
     width: max-content;
+    text-align: end;
+    padding: 30px;
 }
 
 .rating-stars {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 5px;
 }
 
 .rating-stars img {
