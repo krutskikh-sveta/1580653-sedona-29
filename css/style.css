@@ -409,12 +409,6 @@ img {
     gap: 30px;
 }
 
-.grid-offer-info {
-    display: grid;
-    grid-template-columns: 110px 140px auto;
-    padding: 26px 0;
-}
-
 .offer-item-content .offer-item-photo {
     margin: auto 0 auto 73px;
 }
