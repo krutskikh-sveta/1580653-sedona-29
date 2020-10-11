@@ -341,6 +341,10 @@ img {
     vertical-align: center;
 }
 
+.hotel-page .main-footer {
+    grid-row: 4;
+}
+
 .footer-contacts {
     font-weight: bold;
     font-size: 21px;
@@ -397,16 +401,17 @@ img {
     padding: 0;
     min-height: 100%;
     display: grid;
-    grid-template-columns: 210px auto 185px;
+    grid-template-columns: 210px auto min-content;
     gap: 30px;
 }
 
-.offer-item-content .offer-item-photo {
-    margin: auto 0 auto 73px;
+.offer-info {
+    margin: 30px 0;
 }
 
 .offer-item-photo {
     background-color: var(--basic-light-blue);
+    margin: 30px 0 30px 73px;
 }
 
 .offer-item-name {
@@ -414,7 +419,6 @@ img {
     font-size: 21px;
     line-height: 26px;
     color: var(--basic-black);
-    grid-column: 1 / -1;
     margin: 5px 0;
 }
 
@@ -428,30 +432,18 @@ img {
 
 .offer-item-type {
     color: var(--basic-extra-dark-grey);
-    grid-column: 1 /2;
     margin: 5px;
 }
 
 .offer-item-price {
     color: var(--basic-extra-dark-grey);
-    grid-column: 2 / 3;
-    margin: 5px;
-}
-
-.offer-item-content .button {
-    grid-column: 1 /2;
-    margin: 5px;
-}
-
-.offer-item-content .trigger-button {
-    grid-column: 2 / 3;
     margin: 5px;
 }
 
 .rating-block {
     width: max-content;
     text-align: end;
-    padding: 30px;
+    margin: 30px 75px 30px 0;
 }
 
 .rating-stars {
