@@ -99,14 +99,23 @@ img {
 .main-navigation {
     text-align: center;
     background-color: var(--basic-white);
+    display: block;
 }
 
 .main-navigation-logo {
     position: absolute;
+    min-width: 1200px;
+    margin: 0 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .site-navigation {
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .site-navigation li {
@@ -114,6 +123,15 @@ img {
     font-weight: bold;
     line-height: 26px;
     color: var(--basic-black);
+    margin: auto;
+}
+
+.site-navigation li:nth-child(2) {
+    margin-right: 210px;
+}
+
+.site-navigation li:nth-child(3) {
+    margin-left: 210px;
 }
 
 .current-nav-item {
@@ -227,14 +245,14 @@ img {
 
 .recommendations-list {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 330px;
 }
 
 .recommendation-item {
-    padding: 30px auto;
+    /*padding: 30px auto;*/
+    margin: auto;
 }
 
 .recommendation-title {
@@ -341,10 +359,8 @@ img {
     grid-row: 3;
     grid-column: 1;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 0;
-    vertical-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .hotel-page .main-footer {
@@ -355,15 +371,20 @@ img {
     font-weight: bold;
     font-size: 21px;
     text-align: center;
-    margin: 0;
+    margin: auto;
 }
 
 .footer-social {
     text-align: center;
+    margin: auto;
 }
 
 .footer-social-list {
+    padding: 0;
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .social-button {
@@ -373,6 +394,7 @@ img {
 
 .footer-copyright {
     text-align: center;
+    margin: auto;
 }
 
 .copyright-link {
