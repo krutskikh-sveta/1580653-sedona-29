@@ -10,14 +10,16 @@
 <body class="page-body hotel-page">
 <header class="main-header">
     <nav class="main-navigation">
-        <a class="main-navigation-logo" href="index.html">
+        <a class="main-navigation-logo">
             <img src="https://via.placeholder.com/138x70" alt="Логотип городка Седона">
         </a>
         <ul class="site-navigation">
             <li><a href="blank.html">Информация</a></li>
             <li><a href="blank.html">Фото и видео</a></li>
+        </ul>
+        <ul class="site-navigation">
             <li><a href="blank.html">Карта штата</a></li>
-            <li><span class="current-nav-item">Гостиницы</span></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
     </nav>
 </header>
@@ -28,9 +30,7 @@
         <h2 class="visually-hidden">Фильтры</h2>
         <div class="background-image"><img src="https://via.placeholder.com/1200x217" alt="Background"></div>
         <!-- Здесь будет форма фильтра -->
-        <div class="filter-button">
-            <button type="button">Показать</button>
-        </div>
+        <button class="button line-ghost-button filter-button" type="button">Показать</button>
     </section>
     <section class="sorting-block">
         <h2 class="visually-hidden">Сортировка</h2>
@@ -48,10 +48,11 @@
                         <p class="offer-item-name">Amara Resort & Spa</p>
                         <p class="offer-item-type">Гостиница</p>
                         <p class="offer-item-price">От 4000 Р.</p>
-                        <button class="more-info-button button" type="button"><span class="button-text">Подробнее</span>
+                        <button class="button secondary-button more-info-button" type="button"><span
+                                class="button-text">Подробнее</span>
                         </button>
-                        <button class="more-info-button form-trigger" type="button"><span
-                                class="trigger-text">Забронировать</span></button>
+                        <button class="button primary-button book-button" type="button"><span
+                                class="button-text">Забронировать</span></button>
                     </div>
                     <div class="rating-block">
                         <ul class="rating-stars">
@@ -80,10 +81,11 @@
                         <p class="offer-item-name">Desert Quail Inn</p>
                         <p class="offer-item-type">Мотель</p>
                         <p class="offer-item-price">От 3000 Р.</p>
-                        <button class="more-info-button button" type="button"><span class="button-text">Подробнее</span>
+                        <button class="button secondary-button more-info-button" type="button"><span
+                                class="button-text">Подробнее</span>
                         </button>
-                        <button class="more-info-button form-trigger" type="button"><span
-                                class="trigger-text">Забронировать</span></button>
+                        <button class="button primary-button book-button" type="button"><span
+                                class="button-text">Забронировать</span></button>
                     </div>
                     <div class="rating-block">
                         <ul class="rating-stars">
@@ -109,10 +111,11 @@
                         <p class="offer-item-name">Villas at Poco Diablo</p>
                         <p class="offer-item-type">Апартаменты</p>
                         <p class="offer-item-price">От 2000 Р.</p>
-                        <button class="more-info-button button" type="button"><span class="button-text">Подробнее</span>
+                        <button class="button secondary-button more-info-button" type="button"><span
+                                class="button-text">Подробнее</span>
                         </button>
-                        <button class="more-info-button form-trigger" type="button"><span
-                                class="trigger-text">Забронировать</span></button>
+                        <button class="button primary-button book-button" type="button"><span
+                                class="button-text">Забронировать</span></button>
                     </div>
                     <div class="rating-block">
                         <ul class="rating-stars">
@@ -139,9 +142,12 @@
     <section class="footer-social">
         <h2 class="visually-hidden">Подписывайтесь на нас</h2>
         <ul class="footer-social-list">
-            <li><a class="social-button button" href="#"><span class="button-text">Twitter</span></a></li>
-            <li><a class="social-button button" href="#"><span class="button-text">Facebook</span></a></li>
-            <li><a class="social-button button" href="#"><span class="button-text">Youtube</span></a></li>
+            <li><a class="button secondary-button social-button" href="#"><span class="button-text">Twitter</span></a>
+            </li>
+            <li><a class="button secondary-button social-button" href="#"><span class="button-text">Facebook</span></a>
+            </li>
+            <li><a class="button secondary-button social-button" href="#"><span class="button-text">Youtube</span></a>
+            </li>
         </ul>
     </section>
     <p class="footer-copyright">Website by <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML

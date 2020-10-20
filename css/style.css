@@ -293,78 +293,6 @@ img {
     text-align: center;
 }
 
-.trigger-button {
-    text-align: center;
-    color: var(--basic-white);
-    font-family: "PT Sans", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
-    text-transform: uppercase;
-    padding: 30px 125px;
-    border: none;
-    outline: none;
-}
-
-.more-info-button {
-    text-align: center;
-    color: var(--basic-white);
-    font-family: "PT Sans", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 21px;
-    text-transform: uppercase;
-    padding: 3px 16px;
-    border: none;
-    outline: none;
-}
-
-.form-trigger {
-    background-color: var(--basic-milk-chocolate);
-}
-
-.form-trigger:hover {
-    background-color: var(--basic-chocolate);
-}
-
-.form-trigger:active {
-    background-color: var(--basic-dark-chocolate);
-}
-
-.form-trigger:active .trigger-text {
-    opacity: 30%;
-}
-
-.search-button {
-    text-align: center;
-    background-color: var(--basic-light-blue);
-    color: var(--basic-white);
-    font-family: "PT Sans", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
-    text-transform: uppercase;
-    padding: 16px 182px;
-    border: none;
-    outline: none;
-}
-
-.button {
-    background-color: var(--basic-light-blue);
-}
-
-.button:hover {
-    background-color: var(--basic-blue);
-}
-
-.button:active {
-    background-color: var(--basic-dark-blue);
-}
-
-.button:active .button-text {
-    opacity: 30%;
-}
-
 .search-container-map {
     text-align: center;
 }
@@ -407,11 +335,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-}
-
-.social-button {
-    background-color: var(--basic-light-blue);
-    color: var(--basic-white);
 }
 
 .footer-copyright {
@@ -506,27 +429,6 @@ img {
     background-color: var(--basic-light-silver);
 }
 
-.filter-button button {
-    opacity: 100%;
-    border: 2px solid var(--basic-white);
-    box-sizing: border-box;
-    color: var(--basic-white);
-    text-align: center;
-    font-family: "PT Sans", Arial, sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    text-transform: uppercase;
-    padding: 7px 35px;
-    border-radius: 2px;
-    outline: none;
-}
-
-.filter-button button:hover {
-    background-color: var(--basic-white);
-    border: 2px solid var(--basic-white);
-    color: var(--basic-black);
-}
-
 .total-offers {
     font-weight: bold;
     font-size: 21px;
@@ -535,4 +437,93 @@ img {
 
 .background-image {
     text-align: center;
+}
+
+/* Buttons */
+
+.button {
+    background-color: var(--basic-grey);
+    text-align: center;
+    color: var(--basic-white);
+    font-family: "PT Sans", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.primary-button {
+    background-color: var(--basic-milk-chocolate);
+}
+
+.primary-button:hover {
+    background-color: var(--basic-chocolate);
+}
+
+.primary-button:active {
+    background-color: var(--basic-dark-chocolate);
+}
+
+.primary-button:active .button-text {
+    opacity: 30%;
+}
+
+.secondary-button {
+    background-color: var(--basic-light-blue);
+}
+
+.secondary-button:hover {
+    background-color: var(--basic-blue);
+}
+
+.secondary-button:active {
+    background-color: var(--basic-dark-blue);
+}
+
+.secondary-button:active .button-text {
+    opacity: 30%;
+}
+
+.search-button {
+    font-size: 21px;
+    line-height: 26px;
+    padding: 16px 182px;
+}
+
+.form-trigger {
+    font-size: 21px;
+    line-height: 26px;
+    padding: 30px 125px;
+}
+
+.more-info-button {
+    padding: 3px 16px;
+}
+
+.book-button {
+    padding: 3px 16px;
+}
+
+.line-ghost-button {
+    background-color: unset;
+    opacity: 100%;
+    border: 2px solid var(--basic-white);
+    border-radius: 2px;
+}
+
+.line-ghost-button:hover {
+    background-color: var(--basic-white);
+    color: var(--basic-black);
+}
+
+.filter-button  {
+    box-sizing: border-box;
+    padding: 7px 35px;
+}
+
+.social-button {
+    /*todo размеры и svg*/
 }
