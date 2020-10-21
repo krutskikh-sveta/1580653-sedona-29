@@ -469,6 +469,7 @@ img {
 
 .hotel-page .main-footer {
     grid-row: 4;
+    opacity: unset;
 }
 
 .footer-contacts {
