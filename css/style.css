@@ -191,20 +191,15 @@ img {
 
 .reasons-title-block {
     min-height: 214px;
-    padding: 40px auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .reasons-list-title {
     font-weight: bold;
     font-size: 21px;
     color: var(--basic-black);
-    margin: auto;
-}
-
-.reasons-list-description {
-    margin: auto;
 }
 
 .reasons-list {
@@ -228,6 +223,9 @@ img {
 .reason-info {
     flex-basis: 33%;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .reason-image {
@@ -274,7 +272,7 @@ img {
     height: 330px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .recommendation-title {
