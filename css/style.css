@@ -303,8 +303,21 @@ img {
 .sorting-block {
     padding: 5px 73px;
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    width: 88%;
+}
+
+.sorting {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    width: 40%;
+    flex-grow: 2;
+    align-content: center;
+}
+
+.sorting-switcher {
+    outline: 1px solid black;
+    width: 10%;
 }
 
 .total-offers {
@@ -312,15 +325,15 @@ img {
     font-size: 21px;
     line-height: 26px;
     margin: auto 0;
-    padding: 25px 0;
+    padding: 25px 25px 25px 0;
 }
 
 .sorting-title {
-    margin: auto 0;
+    margin: 0 20px 0 0;
 }
 
 .sorting-type {
-    margin: auto 0;
+    margin: auto 30px auto 0;
     color: var(--basic-black);
     opacity: 0.3;
     border-bottom: 1px dotted var(--basic-light-blue);
@@ -344,7 +357,6 @@ img {
 }
 
 .offers-block {
-    padding: 5px 73px;
     display: flex;
 }
 
@@ -353,30 +365,33 @@ img {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    width: 100%;
 }
 
 .offer-item {
-    border-top: 1px solid var(--basic-light-silver);
     border-bottom: 1px solid var(--basic-light-silver);
+    padding: 30px 73px;
+}
+
+.offer-item:first-child {
+    border-top: 1px solid var(--basic-light-silver);
 }
 
 .offer-item-content {
     margin: 0;
-    padding: 0;
-    min-width: 1050px;
     display: flex;
 }
 
 .offer-info {
-    padding: 30px;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .offer-item-photo {
-    align-self: center;
+    /*align-self: center;*/
     background-color: var(--basic-light-blue);
+    margin-right: 30px;
 }
 
 .offer-item-name {
@@ -386,6 +401,10 @@ img {
     color: var(--basic-black);
     margin: 0;
     width: 100%;
+}
+
+.offer-flex-column {
+    margin-right: 5px;
 }
 
 .offer-item-name:hover {
@@ -398,20 +417,17 @@ img {
 
 .offer-item-type {
     color: var(--basic-extra-dark-grey);
-    margin: 8px 0;
-    width: 15%;
 }
 
 .offer-item-price {
     color: var(--basic-extra-dark-grey);
-    margin: 8px 0;
-    width: 85%;
 }
 
 .rating-block {
     width: 12%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .rating-stars {
@@ -420,7 +436,6 @@ img {
     display: flex;
     padding: 0;
     justify-content: flex-end;
-    margin-top: 30px;
 }
 
 .rating-stars img {
@@ -429,7 +444,7 @@ img {
 }
 
 .rating {
-    margin: 30px auto;
+    margin: 0;
     color: var(--basic-neutral-dark-grey);
     padding: 3px 13px;
     background-color: var(--basic-light-silver);
@@ -561,13 +576,10 @@ img {
 
 .more-info-button {
     padding: 3px 16px;
-    margin-right: 5px;
-    margin-top: 5px;
 }
 
 .book-button {
     padding: 3px 16px;
-    margin-top: 5px;
 }
 
 .line-ghost-button {

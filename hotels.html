@@ -34,10 +34,15 @@
     <section class="sorting-block">
         <h2 class="visually-hidden">Сортировка</h2>
         <p class="total-offers">Найдено: 3</p>
-        <p class="sorting-title">Сортировка:</p>
-        <a class="sorting-type active">По цене</a>
-        <a class="sorting-type">По типу</a>
-        <a class="sorting-type">По рейтингу</a>
+        <div class="sorting">
+            <p class="sorting-title">Сортировка:</p>
+            <a class="sorting-type active">По цене</a>
+            <a class="sorting-type">По типу</a>
+            <a class="sorting-type">По рейтингу</a>
+        </div>
+        <div class="sorting-switcher">
+            <!-- Тут будут стрелочки -->
+        </div>
         <!-- Здесь будет форма сортировки -->
     </section>
     <section class="offers-block">
@@ -49,13 +54,17 @@
                          alt="Фото отеля Amara Resort & Spa">
                     <div class="offer-info">
                         <p class="offer-item-name">Amara Resort & Spa</p>
-                        <p class="offer-item-type">Гостиница</p>
-                        <p class="offer-item-price">От 4000 Р.</p>
-                        <button class="button secondary-button more-info-button" type="button"><span
-                                class="button-text">Подробнее</span>
-                        </button>
-                        <button class="button primary-button book-button" type="button"><span
-                                class="button-text">Забронировать</span></button>
+                        <div class="offer-flex-column">
+                            <p class="offer-item-type">Гостиница</p>
+                            <button class="button secondary-button more-info-button" type="button"><span
+                                    class="button-text">Подробнее</span>
+                            </button>
+                        </div>
+                        <div class="offer-flex-column">
+                            <p class="offer-item-price">От 4000 Р.</p>
+                            <button class="button primary-button book-button" type="button"><span
+                                    class="button-text">Забронировать</span></button>
+                        </div>
                     </div>
                     <div class="rating-block">
                         <ul class="rating-stars">
@@ -82,13 +91,17 @@
                          alt="Фото отеля Desert Quail Inn">
                     <div class="offer-info">
                         <p class="offer-item-name">Desert Quail Inn</p>
-                        <p class="offer-item-type">Мотель</p>
-                        <p class="offer-item-price">От 3000 Р.</p>
-                        <button class="button secondary-button more-info-button" type="button"><span
-                                class="button-text">Подробнее</span>
-                        </button>
-                        <button class="button primary-button book-button" type="button"><span
-                                class="button-text">Забронировать</span></button>
+                        <div class="offer-flex-column">
+                            <p class="offer-item-type">Мотель</p>
+                            <button class="button secondary-button more-info-button" type="button"><span
+                                    class="button-text">Подробнее</span>
+                            </button>
+                        </div>
+                        <div class="offer-flex-column">
+                            <p class="offer-item-price">От 3000 Р.</p>
+                            <button class="button primary-button book-button" type="button"><span
+                                    class="button-text">Забронировать</span></button>
+                        </div>
                     </div>
                     <div class="rating-block">
                         <ul class="rating-stars">
@@ -112,13 +125,17 @@
                          alt="Фото отеля Villas at Poco Diablo">
                     <div class="offer-info">
                         <p class="offer-item-name">Villas at Poco Diablo</p>
-                        <p class="offer-item-type">Апартаменты</p>
-                        <p class="offer-item-price">От 2000 Р.</p>
-                        <button class="button secondary-button more-info-button" type="button"><span
-                                class="button-text">Подробнее</span>
-                        </button>
-                        <button class="button primary-button book-button" type="button"><span
-                                class="button-text">Забронировать</span></button>
+                        <div class="offer-flex-column">
+                            <p class="offer-item-type">Апартаменты</p>
+                            <button class="button secondary-button more-info-button" type="button"><span
+                                    class="button-text">Подробнее</span>
+                            </button>
+                        </div>
+                        <div class="offer-flex-column">
+                            <p class="offer-item-price">От 2000 Р.</p>
+                            <button class="button primary-button book-button" type="button"><span
+                                    class="button-text">Забронировать</span></button>
+                        </div>
                     </div>
                     <div class="rating-block">
                         <ul class="rating-stars">
