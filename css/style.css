@@ -72,7 +72,16 @@ img {
 }
 
 .visually-hidden {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .page {
@@ -341,7 +350,7 @@ img {
 .search-form-item {
     margin: 15px auto;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -361,10 +370,21 @@ img {
     line-height: 26px;
     text-transform: uppercase;
     background-color: var(--basic-light-silver);
-    border: none;
-    padding: 6px 13px;
+    border: 2px solid transparent;
+    padding: 6px 0 6px 13px;
     flex-grow: 1;
     margin-left: 25px;
+}
+
+.date-input input:hover {
+    background-color: var(--basic-silver);
+    border: 2px solid transparent;
+}
+
+.date-input input:focus {
+    outline: none !important;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-neutral-silver);
 }
 
 .number-input-block {
@@ -735,8 +755,54 @@ img {
     flex-grow: 1;
 }
 
+/*Icons*/
+
 .minus {
     padding-top: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"]:after {
+    content: "";
+    background-image: url("./../img/calendar.svg");
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+    margin-right: 5px;
+}
+
+input[type="date"]:hover:after path {
+    fill: var(--basic-black)
+}
+
+input[type="date"]:active:after path {
+    color: var(--basic-light-blue)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.clickable-svg:hover {
+    fill: var(--basic-black);
+}
+
+.clickable-svg:active {
+    fill: var(--basic-light-blue);
+}
+
+.copyright-link path:hover {
+    fill: var(--basic-light-blue);
+}
+
+.copyright-link path:active {
+    fill: var(--basic-neutral-grey);
 }
 
 /*todo удалить это свойство после верстки формы фильтров*/
