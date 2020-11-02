@@ -72,7 +72,16 @@ img {
 }
 
 .visually-hidden {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .page {
@@ -105,11 +114,16 @@ img {
     justify-content: space-between;
 }
 
-.main-navigation-logo {
+.main-navigation-logo::before {
+    content: "";
     position: absolute;
+    width: 138px;
+    height: 70px;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
 }
 
 .site-navigation {
@@ -275,6 +289,33 @@ img {
     justify-content: center;
 }
 
+.recommendation-item:nth-child(1)::before {
+    content: "";
+    width: 75px;
+    height: 72px;
+    margin: 0 auto;
+    background-image: url("../img/home-icon.svg");
+    background-repeat: no-repeat;
+}
+
+.recommendation-item:nth-child(2)::before {
+    content: "";
+    width: 75px;
+    height: 70px;
+    margin: 0 auto;
+    background-image: url("../img/burger-icon.svg");
+    background-repeat: no-repeat;
+}
+
+.recommendation-item:nth-child(3)::before {
+    content: "";
+    width: 64px;
+    height: 77px;
+    margin: 0 auto;
+    background-image: url("../img/present-icon.svg");
+    background-repeat: no-repeat;
+}
+
 .recommendation-title {
     font-weight: bold;
     font-size: 21px;
@@ -287,8 +328,101 @@ img {
     padding: 40px 0 30px;
 }
 
+.search-form-container {
+    width: 50%;
+    margin: auto;
+}
+
+.search-form-modal {
+    padding: 50px 56px;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+    position: absolute;
+    background-color: var(--basic-white);
+    width: 456px;
+}
+
 .search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search-form-item {
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-form-item:first-child {
+    margin-top: 0;
+}
+
+.date-input {
+    width: 100%;
+}
+
+.date-input input {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    background-color: var(--basic-light-silver);
+    border: 2px solid transparent;
+    padding: 6px 0 6px 13px;
+    flex-grow: 1;
+    margin-left: 25px;
+}
+
+.date-input input:hover {
+    background-color: var(--basic-silver);
+    border: 2px solid transparent;
+}
+
+.date-input input:focus {
+    outline: none !important;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-neutral-silver);
+}
+
+.number-input-block {
+    width: 50%;
+    margin: 15px 0;
+}
+
+.number-input {
+    display: flex;
+    width: 114px;
+}
+
+.number-input-block input {
+    width: 38px;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
     text-align: center;
+    text-transform: uppercase;
+    background-color: var(--basic-light-silver);
+    border: none;
+    padding: 6px 0;
+}
+
+.search-form-item label {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.number-input-block:nth-child(2n) {
+    width: 40%;
+    margin-right: 0;
 }
 
 .search-container-map {
@@ -389,7 +523,6 @@ img {
 }
 
 .offer-item-photo {
-    /*align-self: center;*/
     background-color: var(--basic-light-blue);
     margin-right: 30px;
 }
@@ -498,11 +631,15 @@ img {
 
 .footer-copyright {
     text-align: center;
-    margin: auto;
+    margin: 10px auto;
 }
 
 .copyright-link {
     color: var(--basic-black);
+}
+
+.copyright-link svg {
+    transform: translate(5px, 15px);
 }
 
 .copyright-link:hover {
@@ -565,13 +702,15 @@ img {
 .search-button {
     font-size: 21px;
     line-height: 26px;
-    padding: 16px 182px;
+    padding: 16px 0;
+    margin-top: 45px;
+    width: 100%;
 }
 
 .form-trigger {
     font-size: 21px;
     line-height: 26px;
-    padding: 30px 125px;
+    padding: 30px 140px;
 }
 
 .more-info-button {
@@ -600,7 +739,70 @@ img {
 }
 
 .social-button {
-    /*todo размеры и svg*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 48px;
+    background-color: var(--basic-light-blue);
+    color: inherit;
+}
+
+.number-input-button {
+    text-align: center;
+    background-color: var(--basic-light-silver);
+    padding: 6px 0;
+    flex-grow: 1;
+}
+
+/*Icons*/
+
+.minus {
+    padding-top: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"]:after {
+    content: "";
+    background-image: url("./../img/calendar.svg");
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 23px;
+    margin-right: 5px;
+}
+
+input[type="date"]:hover:after path {
+    fill: var(--basic-black)
+}
+
+input[type="date"]:active:after path {
+    color: var(--basic-light-blue)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.clickable-svg:hover {
+    fill: var(--basic-black);
+}
+
+.clickable-svg:active {
+    fill: var(--basic-light-blue);
+}
+
+.copyright-link path:hover {
+    fill: var(--basic-light-blue);
+}
+
+.copyright-link path:active {
+    fill: var(--basic-neutral-grey);
 }
 
 /*todo удалить это свойство после верстки формы фильтров*/
