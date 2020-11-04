@@ -422,6 +422,16 @@ img {
 
 .search-container-map {
     text-align: center;
+    width: 1199px;
+    height: 593px;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+}
+
+.search-container-map iframe {
+    width: 1199px;
+    height: 593px;
+    border: 0;
 }
 
 .filters-form {
