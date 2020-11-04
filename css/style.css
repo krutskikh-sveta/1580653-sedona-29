@@ -59,7 +59,6 @@ body {
     font-weight: 400;
     color: var(--basic-extra-dark-grey);
     text-transform: uppercase;
-    background-color: var(--basic-grey);
 }
 
 a {
@@ -90,19 +89,24 @@ img {
 
 .page-body {
     min-height: 100%;
+}
+
+.center-container {
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
     display: grid;
     grid-template-rows: min-content 1fr min-content;
-    align-content: start;
 }
 
 /* Main navigation */
 
 .main-header {
     background-color: var(--basic-white);
-    width: 1200px;
     margin: auto;
     grid-row: 1;
     grid-column: 1;
+    width: 100%;
 }
 
 .main-navigation {
@@ -114,16 +118,13 @@ img {
     justify-content: space-between;
 }
 
-.main-navigation-logo::before {
-    content: "";
+.main-navigation-logo {
     position: absolute;
     width: 138px;
     height: 70px;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    background-image: url("../img/logo.svg");
-    background-repeat: no-repeat;
 }
 
 .site-navigation {
@@ -170,7 +171,6 @@ img {
 
 .container {
     background-color: var(--basic-white);
-    width: 1200px;
     margin: 0 auto;
     grid-row: 2 / 4;
     grid-column: 1;
@@ -289,7 +289,7 @@ img {
     justify-content: center;
 }
 
-.recommendation-item:nth-child(1)::before {
+.recommendation-item.recommendation-accommodation::before {
     content: "";
     width: 75px;
     height: 72px;
@@ -298,7 +298,7 @@ img {
     background-repeat: no-repeat;
 }
 
-.recommendation-item:nth-child(2)::before {
+.recommendation-item.recommendation-foods::before {
     content: "";
     width: 75px;
     height: 70px;
@@ -307,7 +307,7 @@ img {
     background-repeat: no-repeat;
 }
 
-.recommendation-item:nth-child(3)::before {
+.recommendation-item.recommendation-souvenirs::before {
     content: "";
     width: 64px;
     height: 77px;
@@ -329,8 +329,9 @@ img {
 }
 
 .search-form-container {
-    width: 50%;
+    width: 47%;
     margin: auto;
+    position: relative;
 }
 
 .search-form-modal {
@@ -338,7 +339,6 @@ img {
     box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
     position: absolute;
     background-color: var(--basic-white);
-    width: 456px;
 }
 
 .search-form {
@@ -362,67 +362,56 @@ img {
     width: 100%;
 }
 
-.date-input input {
-    font-family: "PT Sans", Arial, sans-serif;
-    font-style: normal;
+.search-form-item input {
     font-weight: bold;
-    font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
     background-color: var(--basic-light-silver);
     border: 2px solid transparent;
-    padding: 6px 0 6px 13px;
-    flex-grow: 1;
-    margin-left: 25px;
 }
 
-.date-input input:hover {
+.date-input input {
+    padding: 6px 0 6px 13px;
+    flex-grow: 1;
+}
+
+.number-input-block input {
+    width: 33%;
+    text-align: center;
+    padding: 6px 0;
+}
+
+.search-form-item input:hover {
     background-color: var(--basic-silver);
     border: 2px solid transparent;
 }
 
-.date-input input:focus {
-    outline: none !important;
+.search-form-item input:focus {
+    outline: none;
     background-color: var(--basic-white);
     border: 2px solid var(--basic-neutral-silver);
 }
 
 .number-input-block {
     width: 50%;
-    margin: 15px 0;
 }
 
 .number-input {
     display: flex;
-    width: 114px;
-}
-
-.number-input-block input {
-    width: 38px;
-    font-family: "PT Sans", Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: var(--basic-light-silver);
-    border: none;
-    padding: 6px 0;
+    width: 50%;
 }
 
 .search-form-item label {
-    font-family: "PT Sans", Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 26px;
-    text-transform: uppercase;
+    width: 25%;
 }
 
-.number-input-block:nth-child(2n) {
-    width: 40%;
-    margin-right: 0;
+.number-input-block label {
+    width: 50%;
+}
+
+.children-label {
+    text-align: center;
 }
 
 .search-container-map {
@@ -595,13 +584,12 @@ img {
     line-height: 26px;
     opacity: 0.9;
     background-color: var(--basic-white);
-    width: 1200px;
-    margin: auto;
     grid-row: 3;
     grid-column: 1;
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .hotel-page .main-footer {
@@ -626,7 +614,14 @@ img {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+}
+
+.footer-social-list li {
+    margin-right: 5px;
+}
+
+.footer-social-list li:last-child {
+    margin-right: 0;
 }
 
 .footer-copyright {
@@ -710,7 +705,8 @@ img {
 .form-trigger {
     font-size: 21px;
     line-height: 26px;
-    padding: 30px 140px;
+    padding: 30px 30px;
+    width: 100%;
 }
 
 .more-info-button {
@@ -752,7 +748,7 @@ img {
     text-align: center;
     background-color: var(--basic-light-silver);
     padding: 6px 0;
-    flex-grow: 1;
+    width: 33%;
 }
 
 /*Icons*/
@@ -766,21 +762,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
-input[type="date"]:after {
-    content: "";
-    background-image: url("./../img/calendar.svg");
-    background-repeat: no-repeat;
+.calendar-icon {
     width: 21px;
     height: 23px;
-    margin-right: 5px;
+    position: absolute;
+    right: 65px;
 }
 
-input[type="date"]:hover:after path {
-    fill: var(--basic-black)
+.date-input:hover .calendar-icon path {
+    fill: var(--basic-black);
 }
 
-input[type="date"]:active:after path {
-    color: var(--basic-light-blue)
+.date-input:active .calendar-icon path {
+    fill: var(--basic-light-blue);
 }
 
 input::-webkit-outer-spin-button,
@@ -789,19 +783,23 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.clickable-svg:hover {
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button:hover svg .clickable-svg {
     fill: var(--basic-black);
 }
 
-.clickable-svg:active {
+button:active svg .clickable-svg {
     fill: var(--basic-light-blue);
 }
 
-.copyright-link path:hover {
+.copyright-link:hover path {
     fill: var(--basic-light-blue);
 }
 
-.copyright-link path:active {
+.copyright-link:active path {
     fill: var(--basic-neutral-grey);
 }
 
