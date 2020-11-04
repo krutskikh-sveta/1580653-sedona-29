@@ -36,7 +36,7 @@
                     <h3>Инфраструктура:</h3>
                     <ul>
                         <li class="infrastructure-type-item">
-                            <input type="checkbox" id="water-pool">
+                            <input type="checkbox" id="water-pool" checked>
                             <label for="water-pool">Бассейн</label>
                         </li>
                         <li class="infrastructure-type-item">
@@ -53,15 +53,15 @@
                     <h3>Тип жилья:</h3>
                     <ul>
                         <li class="accommodation-type-item">
-                            <input type="checkbox" id="guesthouse">
+                            <input type="checkbox" id="guesthouse" checked>
                             <label for="guesthouse">Гостиница</label>
                         </li>
                         <li class="accommodation-type-item">
-                            <input type="checkbox" id="hotel">
+                            <input type="checkbox" id="hotel" checked>
                             <label for="hotel">Отель</label>
                         </li>
                         <li class="accommodation-type-item">
-                            <input type="checkbox" id="apartments">
+                            <input type="checkbox" id="apartments" checked>
                             <label for="apartments">Апартаменты</label>
                         </li>
                     </ul>
@@ -69,11 +69,22 @@
                 <div class="price-filter-block">
                     <h3>Стоимость в сутки (Р):</h3>
                     <div class="price-range-block">
-                        <div class="price-range">От 0</div>
-                        <div class="price-range">До 3000</div>
+                        <div class="price-range">
+                            <label for="min-price">от</label>
+                            <input type="number" id="min-price" value="0">
+                        </div>
+                        <div class="price-line"></div>
+                        <div class="price-range">
+                            <label for="max-price">до</label>
+                            <input type="number" id="max-price" value="3000">
+                        </div>
                     </div>
-                    <div>
-                        <!--Здесь будет бегунок-->
+                    <div class="range-controls">
+                        <div class="scale">
+                            <div class="bar"></div>
+                        </div>
+                        <div class="toggle toggle-min" tabindex="0"></div>
+                        <div class="toggle toggle-max" tabindex="0"></div>
                     </div>
                     <button class="button line-ghost-button filter-button" type="button">Показать</button>
                 </div>

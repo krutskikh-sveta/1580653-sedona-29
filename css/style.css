@@ -116,6 +116,7 @@ img {
     flex-wrap: wrap;
     height: 55px;
     justify-content: space-between;
+    position: relative;
 }
 
 .main-navigation-logo {
@@ -425,6 +426,7 @@ img {
 
 .filter-form h3 {
     margin: 0;
+    text-align: start;
 }
 
 .filter-form {
@@ -451,6 +453,7 @@ img {
 .price-filter-block {
     width: 25%;
     padding: 30px 0;
+    text-align: center;
 }
 
 .filter-form ul {
@@ -471,6 +474,7 @@ img {
     border: 2px solid var(--basic-white);
     margin: 23px 16px 0 0;
     appearance: none;
+    -webkit-appearance: none;
     border-radius: 4px;
 }
 
@@ -480,24 +484,103 @@ img {
     border: 2px solid var(--basic-white);
     margin: 23px 16px 0 0;
     appearance: none;
+    -webkit-appearance: none;
     border-radius: 4px;
+}
+
+.infrastructure-type-item input:focus {
+    outline: none;
+}
+
+.accommodation-type-item input:focus {
+    outline: none;
+}
+
+.infrastructure-type-item input:checked {
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.accommodation-type-item input:checked {
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    border: none;
 }
 
 .price-range-block {
     display: flex;
-    flex-wrap: wrap;
     border: 2px solid var(--basic-white);
     border-radius: 4px;
-    width: 100%;
     justify-items: center;
     margin-top: 5px;
+    position: relative;
 }
 
 .price-range {
-    border-right: none;
-    text-align: center;
+    text-align: end;
     width: 50%;
     padding: 5px 0;
+}
+
+.price-range-block input {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--basic-white);
+    width: 50%;
+}
+
+.price-line::after {
+    content: "";
+    border: 1px solid var(--basic-white);
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+}
+
+.range-controls {
+    position: relative;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: var(--basic-white);
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 5px;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--basic-white);
+    background-color: var(--basic-middle-grey);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 var(--basic-light-grey);
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+
+}
+
+.range-controls .toggle-max {
+    left: 170px;
 }
 
 .sorting-block {
