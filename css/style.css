@@ -110,6 +110,7 @@ img {
 }
 
 .main-navigation {
+    position:relative;
     text-align: center;
     background-color: var(--basic-white);
     display: flex;
@@ -358,8 +359,13 @@ img {
     margin-top: 0;
 }
 
-.date-input {
+.date-input-container {
     width: 100%;
+}
+
+.date-input-with-icon {
+    width: 75%;
+    position: relative;
 }
 
 .search-form-item input {
@@ -370,24 +376,24 @@ img {
     border: 2px solid transparent;
 }
 
-.date-input input {
-    padding: 6px 0 6px 13px;
-    flex-grow: 1;
+.date-input {
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 5px;
 }
 
 .number-input-block input {
     width: 33%;
     text-align: center;
-    padding: 6px 0;
 }
 
-.search-form-item input:hover {
+.date-input:hover {
     background-color: var(--basic-silver);
     border: 2px solid transparent;
 }
 
-.search-form-item input:focus {
-    outline: none;
+.date-input:focus {
     background-color: var(--basic-white);
     border: 2px solid var(--basic-neutral-silver);
 }
@@ -766,14 +772,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 21px;
     height: 23px;
     position: absolute;
-    right: 65px;
+    left: 310px;
+    bottom: 5px;
 }
 
-.date-input:hover .calendar-icon path {
+.date-input-with-icon:hover path {
     fill: var(--basic-black);
 }
 
-.date-input:active .calendar-icon path {
+.date-input-with-icon:active path {
     fill: var(--basic-light-blue);
 }
 
