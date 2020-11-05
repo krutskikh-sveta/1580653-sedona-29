@@ -107,6 +107,7 @@ img {
     grid-row: 1;
     grid-column: 1;
     width: 100%;
+    z-index: 1;
 }
 
 .main-navigation {
@@ -421,7 +422,9 @@ img {
 .filters-form-block {
     background-color: var(--basic-light-blue);
     background-image: url('../img/background-photo.jpg');
-    /*filter: blur(3px);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 75%;
 }
 
 .filter-form h3 {
@@ -434,6 +437,7 @@ img {
     flex-wrap: wrap;
     padding: 0 73px;
     color: var(--basic-white);
+    backdrop-filter: blur(10px);
 }
 
 .infrastructure-filter-block {
@@ -456,47 +460,36 @@ img {
     text-align: center;
 }
 
-.filter-form ul {
+.checkbox-list {
     list-style-type: none;
     padding: 0;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.checkbox-block {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-block input {
+    width: 23px;
+    height: 23px;
+    border: 2px solid var(--basic-white);
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 4px;
     margin: 0;
 }
 
-.filter-form li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-}
-
-.infrastructure-type-item input {
-    width: 23px;
-    height: 23px;
-    border: 2px solid var(--basic-white);
-    margin: 23px 16px 0 0;
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 4px;
-}
-
-.accommodation-type-item input {
-    width: 23px;
-    height: 23px;
-    border: 2px solid var(--basic-white);
-    margin: 23px 16px 0 0;
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 4px;
-}
-
-.infrastructure-type-item input:focus {
+.checkbox-block input:focus {
     outline: none;
 }
 
-.accommodation-type-item input:focus {
-    outline: none;
-}
-
-.infrastructure-type-item input:checked {
+.checkbox-block input:checked {
     width: 23px;
     height: 23px;
     background-image: url("../img/checkbox-on.svg");
@@ -504,12 +497,8 @@ img {
     border: none;
 }
 
-.accommodation-type-item input:checked {
-    width: 23px;
-    height: 23px;
-    background-image: url("../img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    border: none;
+.checkbox-block label {
+    margin-left: 15px;
 }
 
 .price-range-block {
@@ -547,7 +536,7 @@ img {
 
 .range-controls {
     position: relative;
-    height: 40px;
+    height: 30px;
     padding-top: 15px;
 }
 
@@ -659,13 +648,13 @@ img {
 .sorting-type:active {
     color: var(--basic-black);
     opacity: unset;
-    border: none;
+    border-bottom: 1px solid transparent;
 }
 
 .active {
     color: var(--basic-light-blue);
     opacity: unset;
-    border: none;
+    border-bottom: 1px solid transparent;
 }
 
 .offers-block {
@@ -759,10 +748,6 @@ img {
     padding: 3px 13px;
     background-color: var(--basic-light-silver);
     align-self: flex-end;
-}
-
-.background-image {
-    text-align: center;
 }
 
 /* Footer */
