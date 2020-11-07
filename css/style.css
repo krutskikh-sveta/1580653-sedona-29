@@ -803,7 +803,7 @@ img {
 
 .offer-item {
     border-bottom: 1px solid var(--basic-light-silver);
-    padding: 29px 73px;
+    padding: 30px 73px;
 }
 
 .offer-item:first-child {
@@ -1052,11 +1052,11 @@ img {
 }
 
 .more-info-button {
-    padding: 3px 17px;
+    padding: 5px 17px;
 }
 
 .book-button {
-    padding: 3px 17px;
+    padding: 5px 17px;
 }
 
 .line-ghost-button {
