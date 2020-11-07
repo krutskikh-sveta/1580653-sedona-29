@@ -803,7 +803,7 @@ img {
 
 .offer-item {
     border-bottom: 1px solid var(--basic-light-silver);
-    padding: 27px 73px;
+    padding: 30px 73px;
 }
 
 .offer-item:first-child {
@@ -811,7 +811,6 @@ img {
 }
 
 .offer-item-content {
-    margin: 0;
     display: flex;
 }
 
@@ -821,12 +820,9 @@ img {
     flex-wrap: wrap;
 }
 
-.offer-item-photo-link {
-    width: 17%;
-}
-
 .offer-item-photo {
     background-color: var(--basic-light-blue);
+    margin-right: 30px;
 }
 
 .offer-item-name {
@@ -1056,11 +1052,11 @@ img {
 }
 
 .more-info-button {
-    padding: 3px 17px;
+    padding: 5px 17px;
 }
 
 .book-button {
-    padding: 3px 17px;
+    padding: 5px 17px;
 }
 
 .line-ghost-button {
