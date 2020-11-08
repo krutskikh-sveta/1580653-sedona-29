@@ -11,6 +11,8 @@ const childrenPlus = childrenBlock.querySelector(".plus");
 const adultsMinus = adultsBlock.querySelector(".minus");
 const adultsPlus = adultsBlock.querySelector(".plus");
 
+searchFormModal.classList.add("hidden");
+
 triggerButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     if (searchFormModal.classList.contains("hidden")) {
@@ -25,15 +27,9 @@ triggerButton.addEventListener("click", function (evt) {
 });
 
 searchFormModal.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-
-    if (!dateFrom.value || !dateTo.value || !adultsNumber.value || !childrenNumber.value) {
-        searchFormModal.classList.remove("validation-error");
-        searchFormModal.offsetWidth = searchFormModal.offsetWidth;
-        searchFormModal.classList.add("validation-error");
-    }
-
-    if (adultsNumber.value === "0" && childrenNumber.value === "0") {
+    if (!dateFrom.value || !dateTo.value || !adultsNumber.value || !childrenNumber.value
+        || (adultsNumber.value === "0" && childrenNumber.value === "0")) {
+        evt.preventDefault();
         searchFormModal.classList.remove("validation-error");
         searchFormModal.offsetWidth = searchFormModal.offsetWidth;
         searchFormModal.classList.add("validation-error");
