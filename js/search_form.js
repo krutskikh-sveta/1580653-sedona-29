@@ -25,15 +25,15 @@ triggerButton.addEventListener("click", function (evt) {
 });
 
 searchFormModal.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+
     if (!dateFrom.value || !dateTo.value || !adultsNumber.value || !childrenNumber.value) {
-        evt.preventDefault();
         searchFormModal.classList.remove("validation-error");
         searchFormModal.offsetWidth = searchFormModal.offsetWidth;
         searchFormModal.classList.add("validation-error");
     }
 
     if (adultsNumber.value === "0" && childrenNumber.value === "0") {
-        evt.preventDefault();
         searchFormModal.classList.remove("validation-error");
         searchFormModal.offsetWidth = searchFormModal.offsetWidth;
         searchFormModal.classList.add("validation-error");
@@ -52,7 +52,7 @@ window.addEventListener("keydown", function (evt) {
 childrenMinus.addEventListener("click", function (evt) {
     evt.preventDefault();
     let val = parseInt(childrenNumber.value);
-    if (val > 0 && val <= 15) {
+    if (val > childrenNumber.min && val <= childrenNumber.max) {
         val -= 1;
         childrenNumber.value = val;
     }
@@ -61,7 +61,7 @@ childrenMinus.addEventListener("click", function (evt) {
 childrenPlus.addEventListener("click", function (evt) {
     evt.preventDefault();
     let val = parseInt(childrenNumber.value);
-    if (val >= 0 && val < 15) {
+    if (val >= childrenNumber.min && val < childrenNumber.max) {
         val += 1;
         childrenNumber.value = val;
     }
@@ -70,7 +70,7 @@ childrenPlus.addEventListener("click", function (evt) {
 adultsMinus.addEventListener("click", function (evt) {
     evt.preventDefault();
     let val = parseInt(adultsNumber.value);
-    if (val > 0 && val <= 15) {
+    if (val > adultsNumber.min && val <= adultsNumber.max) {
         val -= 1;
         adultsNumber.value = val;
     }
@@ -79,7 +79,7 @@ adultsMinus.addEventListener("click", function (evt) {
 adultsPlus.addEventListener("click", function (evt) {
     evt.preventDefault();
     let val = parseInt(adultsNumber.value);
-    if (val >= 0 && val < 15) {
+    if (val >= adultsNumber.min && val < adultsNumber.max) {
         val += 1;
         adultsNumber.value = val;
     }
