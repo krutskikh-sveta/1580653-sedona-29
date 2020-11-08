@@ -113,12 +113,13 @@
                 <h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
                 <button class="button primary-button form-trigger" type="button"><span class="button-text">Поиск гостиницы в Седоне</span>
                 </button>
-                <form class="search-form-modal" method="get" action="">
+                <form class="search-form-modal" method="get" action="https://echo.htmlacademy.ru/">
                     <div class="search-form">
                         <div class="search-form-item date-input-container">
                             <label for="arrival-date-field">Дата заезда:</label>
                             <div class="date-input-with-icon">
-                                <input class="date-input" id="arrival-date-field" type="date" name="arrival-date"
+                                <input class="date-input date-from" id="arrival-date-field" type="date"
+                                       name="arrival-date"
                                        value="2017-04-24">
                                 <svg class="calendar-icon" width="21" height="23" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +135,8 @@
                         <div class="search-form-item date-input-container">
                             <label for="departure-date-field">Дата выезда:</label>
                             <div class="date-input-with-icon">
-                                <input class="date-input" id="departure-date-field" type="date" name="departure-date"
+                                <input class="date-input date-to" id="departure-date-field" type="date"
+                                       name="departure-date"
                                        value="2017-07-04">
                                 <svg class="calendar-icon" width="21" height="23" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -147,16 +149,16 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="search-form-item number-input-block">
+                        <div class="search-form-item number-input-block adults-number">
                             <label for="adults-field">Взрослые:</label>
                             <span class="number-input">
-                    <button class="button number-input-button minus">
+                    <button class="button number-input-button minus" type="button">
                         <svg width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="clickable-svg" fill="#A9A9A9" d="M0 0h12v3H0z"></path>
                         </svg>
                     </button>
-                    <input id="adults-field" type="number" name="adults" value="2">
-                    <button class="button number-input-button">
+                    <input class="number" id="adults-field" type="number" name="adults" value="2" min="0" max="15">
+                    <button class="button number-input-button plus" type="button">
                         <svg width="11" height="11" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path class="clickable-svg" fill-rule="evenodd" clip-rule="evenodd"
@@ -167,16 +169,16 @@
                     </button>
                         </span>
                         </div>
-                        <div class="search-form-item number-input-block">
+                        <div class="search-form-item number-input-block children-number">
                             <label class="children-label" for="children-field">Дети:</label>
                             <span class="number-input">
-                    <button class="button number-input-button minus">
+                    <button class="button number-input-button minus" type="button">
                         <svg width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="clickable-svg" fill="#A9A9A9" d="M0 0h12v3H0z"></path>
                         </svg>
                     </button>
-                    <input id="children-field" type="number" name="children" value="0">
-                    <button class="button number-input-button">
+                    <input class="number" id="children-field" type="number" name="children" value="0" min="0" max="15">
+                    <button class="button number-input-button plus" type="button">
                         <svg width="11" height="11" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path class="clickable-svg" fill-rule="evenodd" clip-rule="evenodd"
@@ -249,5 +251,7 @@
         </div>
     </footer>
 </div>
+
+<script src="js/search_form.js"></script>
 </body>
 </html>

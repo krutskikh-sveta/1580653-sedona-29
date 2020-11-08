@@ -92,6 +92,20 @@ img {
     overflow: hidden;
 }
 
+.hidden {
+    display: none;
+}
+
+.modal-show {
+    -webkit-animation: bounce 0.6s;
+    animation: bounce 0.6s;
+}
+
+.validation-error {
+    -webkit-animation: shake 0.6s;
+    animation: shake 0.6s;
+}
+
 .page {
     height: 100%;
 }
@@ -1083,4 +1097,72 @@ button:active .clickable-svg {
 
 .copyright-link:active path {
     fill: var(--basic-neutral-grey);
+}
+
+/*Animations*/
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(10px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(10px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
 }
